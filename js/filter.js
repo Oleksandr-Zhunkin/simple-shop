@@ -1,5 +1,5 @@
 import { getProducts } from "./api";
-import { renderProducts } from "./products";
+import { renderProducts } from "./createProducts";
 
 let allProducts = [];
 let filteredProducts = [];

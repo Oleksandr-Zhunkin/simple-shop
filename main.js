@@ -1,7 +1,8 @@
 import "./style.css";
 import "./js/categories.js";
-import "./js/products.js";
+import "./js/createProducts.js";
 import "./js/filter.js";
+import "./js/renderProductDetails.js";
 
 document.querySelector("#app").innerHTML = `
     <header>
