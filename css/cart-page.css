@@ -1,0 +1,36 @@
+#cart {
+  width: 100%;
+  max-width: 1280px;
+  padding: 0 30px;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 20px;
+  padding: 5px 20px;
+}
+
+#cart-list {
+  min-height: 400px;
+}
+
+.pcs-control {
+  display: flex;
+  gap: 10px;
+}
+
+.option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  border: 1px solid #000;
+  border-color: inherit;
+  border-radius: 50%;
+  font-size: 20px;
+  line-height: 35px;
+}

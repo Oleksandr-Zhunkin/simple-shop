@@ -30,9 +30,9 @@ export const getProductById = async (id) => {
   }
 };
 
-export const createCart = async () => {
+export const createCart = async (data) => {
   try {
-    const response = await axios.post("cart");
+    const response = await axios.post("cart", data);
     return response.data;
   } catch (error) {
     console.error(error);
