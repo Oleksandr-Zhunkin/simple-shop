@@ -15,6 +15,7 @@
     "vite-plugin-static-copy": "^2.0.0"
   },
   "dependencies": {
-    "axios": "^1.7.7"
+    "axios": "^1.7.7",
+    "notyf": "^3.10.0"
   }
 }

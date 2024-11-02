@@ -1,7 +1,11 @@
 import "../css/style.css";
-import { createOrder } from "./api";
+import { Notyf } from "notyf";
+import "notyf/notyf.min.css";
 
+import { createOrder } from "./api";
 import { cartList, LS_KEY_CART } from "./constants";
+
+const notyf = new Notyf();
 
 document.addEventListener("DOMContentLoaded", () => {
   renderCheckoutPage();
@@ -47,6 +51,7 @@ export const renderCheckoutPage = () => {
       };
       createOrder(order)
         .then(() => {
+          notyf.success("Your order has been successfully placed!");
           localStorage.removeItem(LS_KEY_CART);
           event.target.reset();
           window.location.href = "index.html";
