@@ -19,5 +19,5 @@ Checkout Page - checkout.html
 On the checkout page, users can see the total amount due and can place their order by entering their name and address. To confirm the order, they can click the "Submit" button. 
 Upon successful order completion, an alert is displayed, and users are redirected to the categories page. Additionally, local storage is cleared to remove any previously saved cart items.
 
-Link for bekend-part of project -
+Link to bekend-part of project -
 https://github.com/Oleksandr-Zhunkin/be-simple-shop
