@@ -1,22 +1,15 @@
 import { defineConfig } from "vite";
-import staticCopy from "vite-plugin-static-copy";
+import { resolve } from "path";
 
 export default defineConfig({
-  plugins: [
-    staticCopy({
-      targets: [
-        {
-          src: "public/*",
-          dest: "",
-        },
-        {
-          src: "js/*",
-          dest: "js",
-        },
-      ],
-    }),
-  ],
   build: {
-    outDir: "dist",
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, "index.html"),
+        product: resolve(__dirname, "product.html"),
+        cart: resolve(__dirname, "cart.html"),
+        checkout: resolve(__dirname, "checkout.html"),
+      },
+    },
   },
 });

@@ -1,4 +1,4 @@
-import "./style.css";
+import "./css/style.css";
 import "./js/api.js";
 import "./js/constants.js";
 import "./js/categories.js";

@@ -1,4 +1,4 @@
-import "../style.css";
+import "../css/style.css";
 import { createOrder } from "./api";
 
 import { cartList, LS_KEY_CART } from "./constants";
