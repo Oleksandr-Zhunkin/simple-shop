@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 export const renderCheckoutPage = () => {
-  console.log(cartList);
+  const checkoutContainer = document.querySelector("#checkout");
 
   const checkoutPage = `
     <header class="header">
@@ -24,7 +24,7 @@ export const renderCheckoutPage = () => {
     </form>
     </main>`;
 
-  document.querySelector("#checkout").innerHTML = checkoutPage;
+  checkoutContainer.innerHTML = checkoutPage;
 
   document.querySelector("#back-btn").addEventListener("click", () => {
     window.location.href = "cart.html";

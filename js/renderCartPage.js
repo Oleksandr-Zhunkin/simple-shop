@@ -11,7 +11,15 @@ export const renderCartPage = () => {
       .reduce((acc, product) => acc + product.price * product.productCount, 0)
       .toFixed(2)
   );
+
   localStorage.setItem(LS_KEY_CART, JSON.stringify(cartList));
+
+  const cartContainer = document.querySelector("#cart");
+
+  if (!cartContainer) {
+    console.error("Container with ID 'cart' not found.");
+    return;
+  }
 
   const cartPage = `
     <header class="header">
@@ -59,7 +67,7 @@ export const renderCartPage = () => {
       </div>
     </main>
   `;
-  document.querySelector("#cart").innerHTML = cartPage;
+  cartContainer.innerHTML = cartPage;
 
   document.querySelector("#back-btn").addEventListener("click", () => {
     window.location.href = "index.html";

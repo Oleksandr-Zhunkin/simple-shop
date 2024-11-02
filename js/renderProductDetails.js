@@ -15,6 +15,13 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 export const renderProductPage = (product) => {
+  const productContainer = document.querySelector("#product");
+
+  if (!productContainer) {
+    console.error("Container with ID 'product' not found.");
+    return;
+  }
+
   const productPage = `
     <header class="header">
       <button id="back-btn">Go back</button>
@@ -28,7 +35,7 @@ export const renderProductPage = (product) => {
         </div>
     </main>
   `;
-  document.querySelector("#product").innerHTML = productPage;
+  productContainer.innerHTML = productPage;
 
   document.querySelector("#back-btn").addEventListener("click", () => {
     window.location.href = "index.html";
@@ -47,7 +54,7 @@ export const renderProductPage = (product) => {
       }
 
       localStorage.setItem(LS_KEY_CART, JSON.stringify(cartList));
-      window.location.href = "cart.html";
+      window.location.href = "./cart.html";
     });
   });
 };

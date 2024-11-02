@@ -1,4 +1,6 @@
 import "./style.css";
+import "./js/api.js";
+import "./js/constants.js";
 import "./js/categories.js";
 import "./js/createProducts.js";
 import "./js/filter.js";
