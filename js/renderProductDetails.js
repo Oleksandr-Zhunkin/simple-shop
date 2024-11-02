@@ -1,8 +1,7 @@
 import "../style.css";
 
 import { getProductById, createCart } from "./api";
-
-export let cartList = JSON.parse(localStorage.getItem("cartList")) || [];
+import { cartList, LS_KEY_CART } from "./constants";
 
 document.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(window.location.search);
@@ -37,15 +36,17 @@ export const renderProductPage = (product) => {
 
   document.querySelector(".add-btn").addEventListener("click", () => {
     createCart({ id: product._id, quantity: 1 }).then(() => {
-      const existingProduct = cartList.find((item) => item._id === product._id);
+      const existingProduct = cartList.items.find(
+        (item) => item._id === product._id
+      );
 
       if (existingProduct) {
         existingProduct.productCount += 1;
       } else {
-        cartList.push({ ...product, productCount: 1 });
+        cartList.items.push({ ...product, productCount: 1 });
       }
 
-      localStorage.setItem("cartList", JSON.stringify(cartList));
+      localStorage.setItem(LS_KEY_CART, JSON.stringify(cartList));
       window.location.href = "cart.html";
     });
   });

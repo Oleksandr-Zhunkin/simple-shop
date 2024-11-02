@@ -6,6 +6,7 @@
 
 .cart-item {
   display: grid;
+  align-items: center;
   grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
   gap: 30px;
   margin-bottom: 20px;
@@ -33,4 +34,24 @@
   border-radius: 50%;
   font-size: 20px;
   line-height: 35px;
+}
+
+.option:hover {
+  border-color: #646cff;
+}
+
+.remove-btn {
+  color: #ff0000;
+}
+.remove-btn:hover {
+  border-color: #ff0000;
+}
+.cart-total {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-top: 1px solid #000;
 }
